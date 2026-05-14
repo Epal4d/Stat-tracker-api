@@ -55,3 +55,25 @@ def create_players(request):
         },
         status=status.HTTP_201_CREATED
     )
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_players(request, player_id):
+    """Updates an existing player that belongs to an authenticated coach"""
+    player = get_object_or_404(Player, id=player_id, coach=request.user)
+
+    player.name = request.data.get('name', player.name)
+    player.jersey_number = request.data.get('jersey_number', player.jersey_number)
+    player.birthday = request.data.get('birthday', player.birthday)
+    player.position_id = request.data.get('position', player.position_id)
+    player.save()
+
+    return Response(
+        {
+            'id': player.id,
+            'name': player.name,
+            'jersey_number': player.jersey_number,
+            'birthday': player.birthday
+        },
+        status=status.HTTP_200_OK
+    )
