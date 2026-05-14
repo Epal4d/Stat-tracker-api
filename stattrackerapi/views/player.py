@@ -25,7 +25,7 @@ def get_players(request):
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def create_players(request):
+def create_player(request):
     """Creates a new player and assigns them to the authenticated coach """
     position_id = request.data.get('position_id')
     name = request.data.get('name')
@@ -58,7 +58,7 @@ def create_players(request):
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
-def update_players(request, player_id):
+def update_player(request, player_id):
     """Updates an existing player that belongs to an authenticated coach"""
     player = get_object_or_404(Player, id=player_id, coach=request.user)
 
@@ -77,3 +77,11 @@ def update_players(request, player_id):
         },
         status=status.HTTP_200_OK
     )
+
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def delete_player(request, player_id):
+    """ DELETES a player from a coaches team"""
+    player = get_object_or_404(Player, id = player_id, coach= request.user)
+    player.delete()
+    return Response(None, status=status.HTTP_204_NO_CONTENT)
