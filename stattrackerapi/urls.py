@@ -16,4 +16,5 @@ urlpatterns = [
     path('matches/<int:match_id>/stats/', views.get_player_stats, name='get_player_stats'),
     path('matches/<int:match_id>/stats/create/', views.create_player_stat, name='create_player_stat'),
     path('matches/<int:match_id>/stats/<int:stat_id>/update/', views.update_player_stat, name='update_player_stat'),
+    path('matches/<int:match_id>/stats/<int:stat_id>/delete/', views.delete_player_stat, name='delete_player_stat'),
 ]
