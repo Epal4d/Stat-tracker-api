@@ -1,0 +1,542 @@
+{
+  "yaakVersion": "2026.3.1",
+  "yaakSchema": 4,
+  "timestamp": "2026-05-17T22:18:35.343679",
+  "resources": {
+    "workspaces": [
+      {
+        "model": "workspace",
+        "id": "wk_2EoKKPtnUZ",
+        "createdAt": "2026-05-12T15:31:00.292876",
+        "updatedAt": "2026-05-12T15:31:00.292877",
+        "authentication": {},
+        "authenticationType": null,
+        "description": "",
+        "headers": [],
+        "name": "Stat-tracker",
+        "encryptionKeyChallenge": null,
+        "settingValidateCertificates": true,
+        "settingFollowRedirects": true,
+        "settingRequestTimeout": 0,
+        "settingDnsOverrides": []
+      }
+    ],
+    "environments": [],
+    "folders": [
+      {
+        "model": "folder",
+        "id": "fl_7J4fkrYoMn",
+        "createdAt": "2026-05-17T21:37:39.707783",
+        "updatedAt": "2026-05-17T21:37:46.216423",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": null,
+        "authentication": {},
+        "authenticationType": null,
+        "description": "",
+        "headers": [],
+        "name": "PlayerMatch",
+        "sortPriority": 3000.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_Ny34qYWmds",
+        "createdAt": "2026-05-17T18:29:53.004327",
+        "updatedAt": "2026-05-17T21:37:46.210866",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": null,
+        "authentication": {},
+        "authenticationType": null,
+        "description": "",
+        "headers": [],
+        "name": "Matches",
+        "sortPriority": 0.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_7bRGqwzcCj",
+        "createdAt": "2026-05-17T18:29:23.398175",
+        "updatedAt": "2026-05-17T21:37:46.213809",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": null,
+        "authentication": {},
+        "authenticationType": null,
+        "description": "",
+        "headers": [],
+        "name": "Auth",
+        "sortPriority": 1000.0
+      },
+      {
+        "model": "folder",
+        "id": "fl_Lk7KLS4MfP",
+        "createdAt": "2026-05-15T15:42:42.015753",
+        "updatedAt": "2026-05-17T21:37:46.215140",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": null,
+        "authentication": {},
+        "authenticationType": null,
+        "description": "",
+        "headers": [],
+        "name": "Players",
+        "sortPriority": 2000.0
+      }
+    ],
+    "httpRequests": [
+      {
+        "model": "http_request",
+        "id": "rq_tx3zPzfBBe",
+        "createdAt": "2026-05-17T21:37:09.806265",
+        "updatedAt": "2026-05-17T21:40:55.746261",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_7J4fkrYoMn",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"player_id\": 1,\n    \"goals\": 2,\n    \"assists\": 1,\n    \"minutes\": 90,\n    \"yellow_cards\": 0,\n    \"red_cards\": 0,\n    \"shots_taken\": 5\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "e8q94SuFWw"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "j4Y9UTwEWW"
+          },
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "HmqgeNnFxE"
+          }
+        ],
+        "method": "POST",
+        "name": "",
+        "sortPriority": 1000.0,
+        "url": "http://127.0.0.1:8000/api/matches/2/stats/create/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_segxP2Tw4d",
+        "createdAt": "2026-05-17T20:52:30.801193",
+        "updatedAt": "2026-05-17T21:38:16.112862",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_7J4fkrYoMn",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "aMcZukANgM"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "etRAsBnbXr"
+          }
+        ],
+        "method": "GET",
+        "name": "Get playerMatch",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/matches/2/stats/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_doqiVs6AwB",
+        "createdAt": "2026-05-17T19:05:14.931767",
+        "updatedAt": "2026-05-17T20:52:23.366083",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Ny34qYWmds",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "GHJgqZCZG5"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "W406dxQS2R"
+          }
+        ],
+        "method": "DELETE",
+        "name": "Delete Match",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/matches/1/delete/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_SXom55WraW",
+        "createdAt": "2026-05-17T18:44:20.658759",
+        "updatedAt": "2026-05-17T19:05:10.528679",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Ny34qYWmds",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"opponent_name\": \"Riverside FC\",\n    \"date\": \"2026-04-28\",\n    \"location\": \"Away\",\n    \"match_type_id\": 2,\n    \"team_score\": 2,\n    \"opponent_score\": 1\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "KTFeyxR0tG"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "MSfeWbmSBt"
+          },
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "uvzr8uRViE"
+          }
+        ],
+        "method": "PUT",
+        "name": "Update Match",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/matches/1/update/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_t2gdirehkN",
+        "createdAt": "2026-05-17T18:28:42.594290",
+        "updatedAt": "2026-05-17T18:31:12.356718",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Ny34qYWmds",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"opponent_name\": \"Riverside FC\",\n    \"date\": \"2026-04-28\",\n    \"location\": \"Home\",\n    \"match_type_id\": 1,\n    \"team_score\": 3,\n    \"opponent_score\": 1\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "spyQg47Eb2"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "njFqSy4Hrd"
+          },
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "fEWiEpzyyF"
+          }
+        ],
+        "method": "POST",
+        "name": "Create Matches",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/matches/create/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_chau5HF7xY",
+        "createdAt": "2026-05-15T15:44:04.734553",
+        "updatedAt": "2026-05-17T18:29:58.659745",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Ny34qYWmds",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "iA69brIT3m"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "tYJcEYr27Q"
+          }
+        ],
+        "method": "GET",
+        "name": "Get matches",
+        "sortPriority": 1000.0,
+        "url": "http://127.0.0.1:8000/api/matches/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_dqMf53MvZF",
+        "createdAt": "2026-05-14T21:56:19.821496",
+        "updatedAt": "2026-05-15T15:43:29.426153",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Lk7KLS4MfP",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "H8hWkwhVtG"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "4YHngauf3a"
+          }
+        ],
+        "method": "DELETE",
+        "name": "Delete player",
+        "sortPriority": 1000.0,
+        "url": "http://127.0.0.1:8000/api/players/4/delete/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_kU8VZMQXZQ",
+        "createdAt": "2026-05-14T21:04:14.973631",
+        "updatedAt": "2026-05-15T15:43:29.421921",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Lk7KLS4MfP",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"name\": \"Jane Smith\",\n    \"jersey_number\": 10,\n    \"birthday\": \"2008-03-12\"\n}\n"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "EpMIeb7xs8"
+          },
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "DgH9NGtpjA"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "475yI9GFxM"
+          }
+        ],
+        "method": "PUT",
+        "name": "Edit player",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/players/4/update/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_xxYJ9epyJu",
+        "createdAt": "2026-05-13T14:36:00.877871",
+        "updatedAt": "2026-05-15T15:43:29.429733",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Lk7KLS4MfP",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"name\": \"Jane Smith\",\n    \"jersey_number\": 9,\n    \"birthday\": \"2008-03-12\",\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "WPjuQbhy26"
+          },
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "yaSG9MBqum"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "nGm7NdWGqn"
+          }
+        ],
+        "method": "POST",
+        "name": "Create player",
+        "sortPriority": 3000.0,
+        "url": "http://127.0.0.1:8000/api/players/create/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_cU6GvscLgW",
+        "createdAt": "2026-05-12T21:31:16.804488",
+        "updatedAt": "2026-05-15T15:43:29.428002",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_Lk7KLS4MfP",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "V6I5xBWH74"
+          },
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "token 5f1f05117ecc77181fe965e842a07c6af31e96fe",
+            "id": "qPxSW3IXrd"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "WDx056iGTq"
+          }
+        ],
+        "method": "GET",
+        "name": "Get player",
+        "sortPriority": 2000.0,
+        "url": "http://127.0.0.1:8000/api/players/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_uJxEfR8dPg",
+        "createdAt": "2026-05-12T16:01:10.521078",
+        "updatedAt": "2026-05-17T18:29:41.527525",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_7bRGqwzcCj",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {},
+        "bodyType": null,
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Authorization",
+            "value": "Token ac89f2d5afed7541a20b500cc9613338ce5585ec",
+            "id": "ibbZzIeHCq"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": "",
+            "id": "TN2jMt8Qnu"
+          }
+        ],
+        "method": "POST",
+        "name": "Logout",
+        "sortPriority": 2000.0,
+        "url": "http://127.0.0.1:8000/api/logout/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_WMB458VnQa",
+        "createdAt": "2026-05-12T15:56:24.073367",
+        "updatedAt": "2026-05-17T18:29:41.521123",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_7bRGqwzcCj",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"username\": \"testcoach\",\n    \"password\": \"password123\"\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "hBN5WpPk3Q"
+          }
+        ],
+        "method": "POST",
+        "name": "Login",
+        "sortPriority": 0.0,
+        "url": "http://127.0.0.1:8000/api/login/",
+        "urlParameters": []
+      },
+      {
+        "model": "http_request",
+        "id": "rq_8R3cHaAhu2",
+        "createdAt": "2026-05-12T15:31:11.739342",
+        "updatedAt": "2026-05-17T18:29:41.525298",
+        "workspaceId": "wk_2EoKKPtnUZ",
+        "folderId": "fl_7bRGqwzcCj",
+        "authentication": {},
+        "authenticationType": null,
+        "body": {
+          "text": "{\n    \"username\": \"testcoach\",\n    \"password\": \"password123\",\n    \"email\": \"testcoach@email.com\",\n    \"first_name\": \"Test\",\n    \"last_name\": \"Coach\"\n}"
+        },
+        "bodyType": "application/json",
+        "description": "",
+        "headers": [
+          {
+            "enabled": true,
+            "name": "Content-Type",
+            "value": "application/json",
+            "id": "uG7qmaT3c8"
+          }
+        ],
+        "method": "POST",
+        "name": "Register",
+        "sortPriority": 1000.0,
+        "url": "http://127.0.0.1:8000/api/register/",
+        "urlParameters": []
+      }
+    ],
+    "grpcRequests": [],
+    "websocketRequests": []
+  }
+}
