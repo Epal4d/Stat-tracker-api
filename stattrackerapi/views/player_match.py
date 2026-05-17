@@ -66,3 +66,33 @@ def create_player_stat(request, match_id):
         },
         status=status.HTTP_201_CREATED
     )
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_player_stat(request, match_id, stat_id):
+    """Updates an existing player stat entry for a specific match."""
+    match = get_object_or_404(Match, id=match_id, coach=request.user)
+    stat = get_object_or_404(PlayerMatch, id=stat_id, match=match)
+
+    stat.goals = request.data.get('goals', stat.goals)
+    stat.assists = request.data.get('assists', stat.assists)
+    stat.minutes = request.data.get('minutes', stat.minutes)
+    stat.yellow_cards = request.data.get('yellow_cards', stat.yellow_cards)
+    stat.red_cards = request.data.get('red_cards', stat.red_cards)
+    stat.shots_taken = request.data.get('shots_taken', stat.shots_taken)
+    stat.save()
+
+    return Response(
+        {
+            'id': stat.id,
+            'player_id': stat.player.id,
+            'player_name': stat.player.name,
+            'goals': stat.goals,
+            'assists': stat.assists,
+            'minutes': stat.minutes,
+            'yellow_cards': stat.yellow_cards,
+            'red_cards': stat.red_cards,
+            'shots_taken': stat.shots_taken,
+        },
+        status=status.HTTP_200_OK
+    )
