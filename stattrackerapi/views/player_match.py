@@ -96,3 +96,12 @@ def update_player_stat(request, match_id, stat_id):
         },
         status=status.HTTP_200_OK
     )
+
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def delete_player_stat(request, match_id, stat_id):
+    """Deletes a player stat entry for a specific match."""
+    match = get_object_or_404(Match, id=match_id, coach=request.user)
+    stat = get_object_or_404(PlayerMatch, id=stat_id, match=match)
+    stat.delete()
+    return Response(None, status=status.HTTP_204_NO_CONTENT)
