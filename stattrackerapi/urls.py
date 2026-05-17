@@ -9,5 +9,6 @@ urlpatterns = [
     path('players/create/',views.create_player, name="create_player"),
     path('players/<int:player_id>/update/',views.update_player, name="update_player"),
     path('players/<int:player_id>/delete/',views.delete_player, name="delete_player"),
-    path('matches/', views.get_matches, name='get_matches')
+    path('matches/', views.get_matches, name='get_matches'),
+    path('matches/create/', views.create_match, name='create_match'),
 ]
