@@ -68,6 +68,7 @@ def create_match(request):
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_match(request, match_id):
+
     """Updates an existing match that belongs to the authenticated coach."""
     match = get_object_or_404(Match, id=match_id, coach=request.user)
 
@@ -91,3 +92,11 @@ def update_match(request, match_id):
         },
         status=status.HTTP_200_OK
     )
+
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def delete_match(request, match_id):
+    """Deletes a match that belongs to the authenticated coach."""
+    match = get_object_or_404(Match, id=match_id, coach=request.user)
+    match.delete()
+    return Response(None, status=status.HTTP_204_NO_CONTENT)
