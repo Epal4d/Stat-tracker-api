@@ -20,6 +20,7 @@ def get_matches(request):
             'date': match.date,
             'location': match.location,
             'match_type': match.match_type.name if match.match_type else None,
+            'match_type_id': match.match_type_id,
             'team_score': match.team_score,
             'opponent_score': match.opponent_score,
         })
