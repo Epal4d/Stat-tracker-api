@@ -1,0 +1,30 @@
+[
+    {
+        "model": "stattrackerapi.position",
+        "pk": 1,
+        "fields": {
+            "name": "Goalkeeper"
+        }
+    },
+    {
+        "model": "stattrackerapi.position",
+        "pk": 2,
+        "fields": {
+            "name": "Defender"
+        }
+    },
+    {
+        "model": "stattrackerapi.position",
+        "pk": 3,
+        "fields": {
+            "name": "Midfielder"
+        }
+    },
+    {
+        "model": "stattrackerapi.position",
+        "pk": 4,
+        "fields": {
+            "name": "Forward"
+        }
+    }
+]
