@@ -19,6 +19,7 @@ def get_players(request):
             'name': player.name,
             'jersey_number': player.jersey_number,
             'position': player.position.name if player.position else None,
+            'position_id': player.position_id,
             'birthday': player.birthday,
         })
     return Response(player_list, status=status.HTTP_200_OK)
@@ -51,6 +52,7 @@ def create_player(request):
             'name': player.name,
             'jersey_number': player.jersey_number,
             'position': player.position.name if player.position else None,
+            'position_id': player.position_id,
             'birthday': player.birthday
         },
         status=status.HTTP_201_CREATED
@@ -65,7 +67,7 @@ def update_player(request, player_id):
     player.name = request.data.get('name', player.name)
     player.jersey_number = request.data.get('jersey_number', player.jersey_number)
     player.birthday = request.data.get('birthday', player.birthday)
-    player.position_id = request.data.get('position', player.position_id)
+    player.position_id = request.data.get('position_id', player.position_id)
     player.save()
 
     return Response(
@@ -73,6 +75,8 @@ def update_player(request, player_id):
             'id': player.id,
             'name': player.name,
             'jersey_number': player.jersey_number,
+            'position' : player.position.name if player.position else None,
+            'position_id' : player.position_id,
             'birthday': player.birthday
         },
         status=status.HTTP_200_OK
